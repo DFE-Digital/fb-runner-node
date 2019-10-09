@@ -53,24 +53,24 @@ workflows:
   version: 2
   test_and_build:
     jobs:
-      - test
-      - build_to_test:
-          requires:
-            - test
-          filters:
-            branches:
-              only: master
-      - confirm_integration_build:
-          type: approval
-          requires:
-            - build_to_test
-      - build_to_integration:
-          requires:
-            - confirm_integration_build
-      - confirm_live_build:
-          type: approval
-          requires:
-            - build_to_integration
-      - build_to_live:
-          requires:
-            - confirm_live_build
+      # - test
+      - build_to_test
+      #     requires:
+      #       - test
+      #     filters:
+      #       branches:
+      #         only: master
+      # - confirm_integration_build:
+      #     type: approval
+      #     requires:
+      #       - build_to_test
+      # - build_to_integration:
+      #     requires:
+      #       - confirm_integration_build
+      # - confirm_live_build:
+      #     type: approval
+      #     requires:
+      #       - build_to_integration
+      # - build_to_live:
+      #     requires:
+      #       - confirm_live_build
