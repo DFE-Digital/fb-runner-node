@@ -10,7 +10,8 @@
     "start": "node bin/start.js",
     "lint": "eslint lib",
     "lint:fix": "eslint lib --fix",
-    "test": "tap"
+    "test": "tap",
+    "heroku-postbuild": "git clone ${REPO_PATH} forms"
   },
   "author": "Form Builder Team <form-builder-team@digital.justice.gov.uk>",
   "repository": {
